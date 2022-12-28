@@ -16,7 +16,7 @@ symbol_count = {
 
 def slot_machine_spin(rows, cols, symbols):
   all_symbols = []
-  for symbol, symbol_count in symbols.item():
+  for symbol, symbol_count in symbols.items():
     for _ in range(symbol_count):
       all_symbols.append(symbol)
 
@@ -32,6 +32,17 @@ def slot_machine_spin(rows, cols, symbols):
     columns.append(column)
 
   return columns
+
+#This function rearrange the output of the slot machine
+def print_slot_machine(columns):
+  for row in range(len(columns[0])):
+    for i,column in enumerate(columns):
+      if i != len(columns) - 1:
+        print(column[row], end=" | ")
+      else:
+        print(column[row], end="")
+    print()
+
   
 
 # This function allows to user to deposit some amount
@@ -103,5 +114,8 @@ def main():
       break
 
   print(f"You are betting ${bet} on {lines} Lines. Your total bet is ${total_bet}")
+
+  slots = slot_machine_spin(ROWS, COLS, symbol_count)
+  print_slot_machine(slots)
 
 main()
