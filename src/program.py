@@ -38,8 +38,7 @@ def get_number_of_lines():
   
   return lines
 
-#This function will get amount to bet from the user
-
+#This function will get amount to bet on each line from the user
 def get_bet():
 
   while True:
@@ -62,7 +61,8 @@ def main():
   amount = deposit()
   lines = get_number_of_lines()
   bet = get_bet()
+  total_bet = bet * lines
 
-  print(f"Amount: {amount}, Lines: {lines}, Bet: {bet}")
+  print(f"You are betting ${bet} on {lines} Lines. Your total bet is ${total_bet}")
 
 main()
