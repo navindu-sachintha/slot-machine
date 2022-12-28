@@ -1,6 +1,18 @@
+import random
+
 MAX_LINES = 3
 MIN_BET = 1
-MAX_BET = 10
+MAX_BET = 100
+
+ROWS = 3
+COLS = 3
+
+symbol_count = {
+  "A" : 2,
+  "B" : 4,
+  "C" : 6,
+  "D" : 8
+}
 
 # This function allows to user to deposit some amount
 def deposit():
@@ -69,5 +81,7 @@ def main():
       print(f"You balance is insufficient to bet on. Your current balance is ${balance}")
     else:
       break
+
+  print(f"You are betting ${bet} on {lines} Lines. Your total bet is ${total_bet}")
 
 main()
