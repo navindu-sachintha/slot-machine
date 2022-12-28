@@ -64,6 +64,8 @@ def check_winnings(columns, lines, bet, values):
       winnings += values[symbol] * bet
       winning_lines.append(line + 1)
 
+  return winnings, winning_lines
+
 # This function allows to user to deposit some amount
 def deposit():
 
@@ -138,6 +140,6 @@ def main():
   print_slot_machine(slots)
   winnings, winning_lines = check_winnings(slots, lines, bet, symbol_values)
   print(f"You won ${winnings}")
-  print(f"You won on lines: " *winning_lines)
+  print(f"You won on Line(s): ", *winning_lines)
 
 main()
