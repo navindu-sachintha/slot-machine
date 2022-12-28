@@ -14,6 +14,12 @@ symbol_count = {
   "D" : 8
 }
 
+def slot_machine_spin(rows, cols, symbols):
+  all_symbols = []
+  for symbol, symbol_count in symbols.item():
+    for _ in range(symbol_count):
+      all_symbols.append(symbol)
+
 # This function allows to user to deposit some amount
 def deposit():
 
