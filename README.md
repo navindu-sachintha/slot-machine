@@ -4,4 +4,4 @@
 
 ![Screenshot](/src/slot_SS.png)
 
-### Tutorial source [Tech with tim](https://youtu.be/th4OBktqK1I)
+### Tutorial source [Tech with tim](https://youtu.be/th4OBktqK1I)&copy;
